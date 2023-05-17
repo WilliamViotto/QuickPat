@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+ /* CSS CABEÇALHO Começo */
+
+
+.container_pai{
+    display: flex;  
+    flex-direction: row;
+    background-color: rgb(16, 92, 255);
+    height: 100px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont1, .cont2, .cont3, .cont4, .cont5{
+    display: flex;
+    border-radius: 20px;
+    border: solid 2px white;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.cont1:hover, .cont2:hover, .cont3:hover, .cont4:hover, .cont5:hover{
+    display: flex;
+    border-radius: 20px;
+    border: solid 2px black;
+    padding: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    background-color: darkgrey;
+    color: white ;
+}
+
+ /* CSS CABEÇALHO Fim */
+
+ /* CSS CORPO DO E-MAIL Começo */
+
+
+h1{
+    text-align: center;
+}
+
+#pai1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#pai2{
+    display: flex;
+    flex-direction: column;
+    margin-left: 45%;
+    margin-right: 45%;
+}
+
+#filha1{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0;
+    margin-bottom: 0.2rem;
+}
+
+#filha1 label{
+    font-size: 1.0rem;
+    font-family: Impact, sans-serif;
+}
+
+#filha1 input{
+    background-color: rgb(197, 197, 197);
+    text-align: center;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+
+
+
+  /* CSS CORPO DO E-MAIL Fim */
+
+
+
+    /* CSS BOTAO CAD */
+    
+.botaocad {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding: 2.00rem;
+    border-radius: 50px;
+}
+
+.botaocad input {
+    font-size: large;
+    margin-top: 2.5px;
+    background-color:  rgb(16, 92, 255);
+    padding: 0.65rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botaocad input:hover {
+    font-size: large;
+    background-color:  rgb(49, 211, 111);
+}
