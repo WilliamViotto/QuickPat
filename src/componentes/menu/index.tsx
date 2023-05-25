@@ -17,22 +17,21 @@ function Botoes (parametro: Props){
     <div className='container_pai'>
 
       <div className='cont1'>
-        <Link to="/">{parametro.titInicio}</Link>        
+       <Link to="/">{parametro.titInicio}</Link>   
       </div>  
-      <div className='cont2'>
-      <Link to="/home/usuario">{parametro.titUsuario}</Link>        
-      </div>
-      <div className='cont3'>
-      <Link to="/home/funcionario">{parametro.titFuncionario}</Link>         
-      </div>
-      <div className='cont4'>
-      <Link to="/home/patrimonio">{parametro.titPatrimonio}</Link>         
+      <div className="dropdown">
+        <button className="dropdown-button">Cadastros</button>
+        <ul className="dropdown-menu">
+          <li><Link to="/home/usuario">{parametro.titUsuario}</Link></li>
+          <li><Link to="/home/funcionario">{parametro.titFuncionario}</Link></li>
+          <li><Link to="/home/patrimonio">{parametro.titPatrimonio}</Link></li>
+        </ul>
+      </div>	
+      <div className='cont5'>
+       <Link to="/home/monitorar">{parametro.titmonitorar}</Link>  
       </div>
       <div className='cont5'>
-      <Link to="/home/monitorar">{parametro.titmonitorar}</Link>         
-      </div>
-      <div className='cont5'>
-      <Link to="*">{parametro.titsair}</Link>         
+       <Link to="*">{parametro.titsair}</Link>   
       </div>
 
     </div>

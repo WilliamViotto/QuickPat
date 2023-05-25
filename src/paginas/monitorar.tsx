@@ -1,5 +1,6 @@
 import '../estilo/estilo.css';
 import Cabecalho from '../componentes/cabecalho';
+import { useState } from 'react';
 
 function Monitorar () {
     

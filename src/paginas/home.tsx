@@ -2,6 +2,7 @@ import '../estilo/estilo.css';
 import Cabecalho from '../componentes/cabecalho';
 
 
+
 function Home () {
     
     return(

@@ -1,5 +1,8 @@
 import '../estilo/estilo.css';
 import Cabecalho from '../componentes/cabecalho';
+import { useState } from 'react';
+import { Input, Button } from 'reactstrap';
+
 
 function Funcionario () {
     
@@ -17,26 +20,26 @@ function Funcionario () {
         <div id='pai1'>
           <div id='filha1'>
             <label> Nome Completo: </label> 
-            <input type="text" placeholder='Digite o nome completo' />  
+            <Input type="text" placeholder='Digite o nome completo' />
             <label> Cargo: </label> 
-            <input type="text" placeholder='Digite o cargo' />  
+            <Input type="text" placeholder='Digite o cargo' />  
             <label> E-mail: </label> 
-            <input type="email" placeholder='Digite o e-mail' /> 
+            <Input type="email" placeholder='Digite o e-mail' /> 
             <label> Confirmação E-mail: </label>
-            <input type="email" placeholder='Digite o e-mail' /> 
+            <Input type="email" placeholder='Digite o e-mail' /> 
           </div>
 
           <div id='filha1'>
             <label> Telefone Celular 1: </label>
-            <input type="text" placeholder='(xx) xxxxx-xxxx' /> 
+            <Input type="text" placeholder='(xx) xxxxx-xxxx' /> 
             <label> Departamento: </label>
-            <input type="text" placeholder='Digite o Departamento' />
+            <Input type="text" placeholder='Digite o Departamento' />
           </div>
         </div>
       
 
         <div className='botaocad'>
-          <input type="button" value='CADASTRAR' />
+        <Button color="success"> Cadastrar </Button>
         </div>
 
       </div>

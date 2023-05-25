@@ -3,6 +3,11 @@
     margin: 0;
 }
 
+a:-webkit-any-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 
  /* CSS CABEÇALHO Começo */
 
@@ -10,7 +15,7 @@
 .container_pai{
     display: flex;  
     flex-direction: row;
-    background-color: rgb(16, 92, 255);
+    background-color: lightgray;
     height: 100px;
     color: white;
     justify-content: center;
@@ -19,9 +24,8 @@
 
 .cont1, .cont2, .cont3, .cont4, .cont5{
     display: flex;
-    border-radius: 20px;
-    border: solid 2px white;
     padding: 5px;
+    color: black;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -29,13 +33,11 @@
 
 .cont1:hover, .cont2:hover, .cont3:hover, .cont4:hover, .cont5:hover{
     display: flex;
-    border-radius: 20px;
-    border: solid 2px black;
     padding: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    background-color: darkgrey;
-    color: white ;
+    color: rgb(16, 92, 255);
+    font-size: large;
 }
 
  /* CSS CABEÇALHO Fim */
@@ -70,21 +72,21 @@ h1{
     margin-bottom: 0.2rem;
 }
 
-#filha1 label{
+#filha2{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#filha2 label{
     font-size: 1.0rem;
     font-family: Impact, sans-serif;
 }
 
-#filha1 input{
-    background-color: rgb(197, 197, 197);
-    text-align: center;
-    margin: 0.6rem 0;
-    padding: 0.8rem 1.2rem;
-    border-radius: 10px;
-    box-shadow: 1px 1px 6px #0000001c;
-    font-size: 0.8rem;
+#filha1 label{
+    font-size: 1.0rem;
+    font-family: Impact, sans-serif;
 }
-
 
 
 
@@ -99,7 +101,7 @@ h1{
     justify-content: flex-end;
     align-items: end;
     padding: 2.00rem;
-    border-radius: 50px;
+    border-radius: 50px;    
 }
 
 .botaocad input {
@@ -111,7 +113,56 @@ h1{
     cursor: pointer;
 }
 
-.botaocad input:hover {
+
+
+
+    /* CSS DROPDOWN */
+
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+
+.dropdown-button {
+    background-color: inherit;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-button:hover {
+    background-color: inherit;
+    color: rgb(16, 92, 255);
     font-size: large;
-    background-color:  rgb(49, 211, 111);
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+    
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+ 
+.dropdown-menu li {
+    padding: 10px;
+}
+    
+.dropdown-menu li:hover {
+    color: rgb(16, 92, 255);
+    font-size: large;
+}
+    
+.dropdown:hover .dropdown-menu {
+    display: block;
 }

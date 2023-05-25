@@ -1,5 +1,6 @@
 import './estilo/estilo.css';
 import { Route,Routes } from 'react-router-dom';
+
 import Home from './paginas/home';
 import Usuario from './paginas/cadusuario';
 import Funcionario from './paginas/cadfuncionario';
