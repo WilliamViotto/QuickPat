@@ -16,8 +16,8 @@ a:-webkit-any-link {
 .container_pai{
     display: flex;  
     flex-direction: row;
-    background-color: lightgray;
-    height: 100px;
+    background-color: #001969;
+    height: 80px;
     color: white;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,6 @@ a:-webkit-any-link {
 .cont1, .cont2, .cont3, .cont4, .cont5{
     display: flex;
     padding: 5px;
-    color: black;
     margin-left: 5px;
     margin-right: 5px;
 }
@@ -37,7 +36,6 @@ a:-webkit-any-link {
     padding: 5px;
     margin-left: 5px;
     margin-right: 5px;
-    color: rgb(16, 92, 255);
     font-size: large;
 }
 
@@ -129,7 +127,7 @@ h1{
 
 .dropdown-button {
     background-color: inherit;
-    color: black;
+    color: white;
     padding: 10px;
     border: none;
     cursor: pointer;
@@ -289,3 +287,71 @@ h1{
 
 }
 
+
+/* LOGIN - TELA PRINCIPAL*/
+.div_principal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.div_centro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+    width: 800px;
+    
+}
+.div_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+}
+.logo1{
+    
+    width: 390px;
+    height: 88px;
+}
+
+.div_logopai{
+    margin-bottom: 90px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0;
+}
+
+.div_top{
+    height: 80px;
+    width: 100%;
+    background-color: #001969 ;
+    align-self: top;
+    margin: 0;
+}
+
+.div_bottom{
+    height: 80px;
+    width: 100%;
+    background-color: #001969;
+    align-self: bottom;
+    margin: 0;
+}
+
+.div_elementos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+}
+.space{
+    margin-top: 3px;
+}

@@ -7,6 +7,7 @@ import Funcionario from './paginas/cadfuncionario';
 import Patrimonio from './paginas/cadpatrimonio';
 import Monitorar from './paginas/monitorar';
 import NotFound from './paginas/notefound';
+import Inicial from './paginas/login';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
     <div>   
       <div>
       <Routes>
+        <Route path='/login' element={<Inicial/>} />
         <Route path='/' element={<Home/>} />
         <Route path='/home/usuario' element={<Usuario/>} />
         <Route path='/home/funcionario' element={<Funcionario/>} />
