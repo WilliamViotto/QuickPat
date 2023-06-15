@@ -32,3 +32,44 @@ Tela Login : Aqui sera a tela de entrar, onde tera um Login e Senha que serao va
 Tela Monitorar : Nessa tela teremos acesso total aos ID's dos funcionarios e patrimonios cadastrados no software.
 
 Tela Notefound : Essa tela sera exibida caso for preenchido algum link que nao esta especificado na rota.
+
+
+``````
+
+Documentacao 
+
+Requisitos Funcionais:
+o	Cadastrar usuario
+o	Nome Completo
+o	Senha
+o	Login
+o	E-mail
+o	telefone
+o	Cadastro de patrimonio
+o	ID
+o	Nome
+o	Descricao
+o	Tipo
+o	Modelo
+o	Valor Real
+o	Grupo
+o	Cadastro de funcionario
+o	Nome Completo
+o	Cargo
+o	Departamento
+o	E-mail
+o	Telefone
+
+
+o Devera realizar a consulta de patrimonio de onde esta
+o Realizar movimentacao de patrimonios entre funcionarios  
+o Cadastro de departamentos
+o Gerar historico de movimentacao dos itens
+o Gerar historico da quantidade dos itens
+o O software devera armazenar informacoes cadastrais no banco de dados
+o Salvar o historico de movimentacao dos patrimonios 
+o Realizar login atraves da validacao de usuario e senha
+
+
+Requisitos Nao Funcionais:
+o		A tela de login nao devera ter uma funcao de cadastrar usuario
