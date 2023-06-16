@@ -17,23 +17,23 @@ function Funcionario () {
           cabTexto6={"Sair"}
         />
         <h1> Cadastro de Funcionário </h1>
-        <div id='pai1'>
-          <div id='filha1'>
+        <div className='pai'>
+          <div className='filha'>
             <label> Nome Completo: </label> 
-            <Input type="text" placeholder='Digite o nome completo' />
+            <Input type="text" placeholder='Digite o nome completo'></Input>
             <label> Cargo: </label> 
-            <Input type="text" placeholder='Digite o cargo' />  
+            <Input type="text" placeholder='Digite o cargo' ></Input> 
             <label> E-mail: </label> 
-            <Input type="email" placeholder='Digite o e-mail' /> 
+            <Input type="email" placeholder='Digite o e-mail' ></Input>
             <label> Confirmação E-mail: </label>
-            <Input type="email" placeholder='Digite o e-mail' /> 
+            <Input type="email" placeholder='Digite o e-mail' ></Input>
           </div>
 
-          <div id='filha1'>
+          <div className='filha'>
             <label> Telefone Celular 1: </label>
-            <Input type="text" placeholder='(xx) xxxxx-xxxx' /> 
+            <Input type="text" placeholder='(xx) xxxxx-xxxx'></Input>
             <label> Departamento: </label>
-            <Input type="text" placeholder='Digite o Departamento' />
+            <Input type="text" placeholder='Digite o Departamento' ></Input>
           </div>
         </div>
       

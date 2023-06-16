@@ -16,25 +16,25 @@ function Patrimonio () {
           cabTexto6={"Sair"}
         />
         <h1> Cadastro de Patrimônio </h1>
-        <div id='pai1'>
-          <div id='filha1'>
+        <div className='pai'>
+          <div className='filha'>
             <label> Nome Completo: </label> 
-            <Input type="text" placeholder='Digite o nome do item' />  
+            <Input type="text" placeholder='Digite o nome do item'></Input>
             <label> ID: </label> 
-            <Input type="text" placeholder='Digite o ID do item' />  
+            <Input type="text" placeholder='Digite o ID do item'></Input> 
             <label> Descrição: </label> 
-            <Input type="text" placeholder='Descreva do item' /> 
+            <Input type="text" placeholder='Descreva do item'></Input>  
             <label> Modelo: </label>
-            <Input type="text" placeholder='Digite o modelo' /> 
+            <Input type="text" placeholder='Digite o modelo' ></Input>  
             <label> Tipo: </label>
-            <Input type="text" placeholder='Digite o tipo' /> 
+            <Input type="text" placeholder='Digite o tipo' ></Input>  
           </div>
 
-          <div id='filha1'>
+          <div className='filha'>
             <label> Valor Real: </label>
-            <Input type="text" placeholder='Digite o R$ da compra' /> 
+            <Input type="text" placeholder='Digite o R$ da compra' ></Input>  
             <label> Grupo: </label>
-            <Input type="text" placeholder='Digite o Grupo' />
+            <Input type="text" placeholder='Digite o Grupo' ></Input> 
           </div>
         </div>
       

@@ -53,7 +53,7 @@ a:-webkit-any-link {
 
  /* CSS CABEÇALHO Fim */
 
- /* CSS CORPO DO E-MAIL Começo */
+ /* CSS CORPO Começo */
 
 
 h1{
@@ -106,9 +106,12 @@ p{
     font-family: Impact, sans-serif;
 }
 
+.telamonitorar{
+    display: flex;
+    flex-direction: row;
+}
 
-
-  /* CSS CORPO DO E-MAIL Fim */
+  /* CSS CORPO Fim */
 
 
 
@@ -373,4 +376,23 @@ p{
 }
 .space{
     margin-top: 3px;
+}
+
+
+.pai{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 6vh;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px 3px rgba(165, 165, 165, 0.4);
+}
+
+.filha{
+    width: 600px;
+    margin: 10.0vh;
+}
+label{
+    margin: 2px;
+    font-size: large;
 }

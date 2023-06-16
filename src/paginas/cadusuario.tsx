@@ -17,34 +17,31 @@ function Usuario () {
           cabTexto6={"Sair"}
         />
         <h1> Cadastro de Usuários </h1>
-        <div id='pai1'>
-          <div id='filha1'>
+        <div className='pai'>
+          <div className='filha'>
             <label> Nome: </label> 
-            <Input type="text" placeholder='Digite o nome' />  
-            <label> Sobrenome: </label> 
-            <Input type="text" placeholder='Digite o sobrenome' />  
+            <Input type="text" placeholder='Digite o nome'></Input>
+            <label> Sobrenome: </label>
+            <Input type="text" placeholder='Digite o sobrenome'></Input>
             <label> E-mail: </label> 
-            <Input type="email" placeholder='Digite o e-mail' /> 
+            <Input type="email" placeholder='Digite o e-mail'></Input>
             <label> Confirmação E-mail: </label>
-            <Input type="email" placeholder='Confirme o e-mail' /> 
+            <Input type="email" placeholder='Confirme o e-mail'></Input>
           </div>
 
-          <div id='filha1'>
+          <div className='filha'>
             <label> Telefone Celular 1: </label>
-            <Input type="text" placeholder='(xx) xxxxx-xxxx' /> 
+            <Input type="text" placeholder='(xx) xxxxx-xxxx'></Input>
             <label> Telefone Celular 2: </label>
-            <Input type="text" placeholder='(xx) xxxxx-xxxx' />
+            <Input type="text" placeholder='(xx) xxxxx-xxxx'></Input>
+            <label> Login: </label> 
+            <Input type="text" placeholder='Digite o usuário'></Input>
+            <label> Senha: </label> 
+            <Input type="password" placeholder='Digite a senha'></Input>
           </div>
         </div>
       
-        <div id='pai2'>
-          <div id='filha2'>
-              <label> Login: </label> 
-              <Input type="text" placeholder='Digite o usuário' />
-              <label> Senha: </label> 
-              <Input type="password" placeholder='Digite a senha' />
-          </div>
-        </div> 
+
 
         <div className='botaocad'>
           <Button color="success"> Cadastrar </Button>
