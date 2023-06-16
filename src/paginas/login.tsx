@@ -31,7 +31,7 @@ function Inicial() {
                 </div>
                         
                 <div className="space">
-                    <Input placeholder="Senha" />
+                    <Input type="password" placeholder="Senha" />
                 </div>
                 <br />    
                 

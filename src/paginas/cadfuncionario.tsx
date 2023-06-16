@@ -17,6 +17,7 @@ function Funcionario () {
           cabTexto6={"Sair"}
         />
         <h1> Cadastro de Funcionário </h1>
+        <form action="">
         <div className='pai'>
           <div className='filha'>
             <label> Nome Completo: </label> 
@@ -41,6 +42,7 @@ function Funcionario () {
         <div className='botaocad'>
         <Button color="success"> Cadastrar </Button>
         </div>
+        </form>
 
       </div>
       )

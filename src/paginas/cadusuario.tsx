@@ -17,8 +17,10 @@ function Usuario () {
           cabTexto6={"Sair"}
         />
         <h1> Cadastro de Usuários </h1>
+        <form action="">
         <div className='pai'>
           <div className='filha'>
+            
             <label> Nome: </label> 
             <Input type="text" placeholder='Digite o nome'></Input>
             <label> Sobrenome: </label>
@@ -40,6 +42,7 @@ function Usuario () {
             <Input type="password" placeholder='Digite a senha'></Input>
           </div>
         </div>
+        </form>
       
 
 

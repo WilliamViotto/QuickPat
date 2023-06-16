@@ -16,6 +16,7 @@ function Patrimonio () {
           cabTexto6={"Sair"}
         />
         <h1> Cadastro de Patrimônio </h1>
+        <form action="">
         <div className='pai'>
           <div className='filha'>
             <label> Nome Completo: </label> 
@@ -42,6 +43,7 @@ function Patrimonio () {
         <div className='botaocad'>
          <Button color="success"> Cadastrar </Button>
         </div>
+        </form>
       </div>
       )
   }

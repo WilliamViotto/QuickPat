@@ -55,6 +55,25 @@ a:-webkit-any-link {
 
  /* CSS CORPO Começo */
 
+.pai{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 6vh;
+    border-radius: 15px;
+    box-shadow: 3px 3px 8px 3px rgba(165, 165, 165, 0.4);
+}
+
+.filha{
+    width: 600px;
+    margin: 10.0vh;
+}
+label{
+    margin: 2px;
+    font-size: large;
+}
+
+
 
 h1{
     text-align: center;
@@ -379,20 +398,3 @@ p{
 }
 
 
-.pai{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 6vh;
-    border-radius: 15px;
-    box-shadow: 3px 3px 8px 3px rgba(165, 165, 165, 0.4);
-}
-
-.filha{
-    width: 600px;
-    margin: 10.0vh;
-}
-label{
-    margin: 2px;
-    font-size: large;
-}
