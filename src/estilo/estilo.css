@@ -232,8 +232,8 @@ p{
     margin-right: 25px;
     margin-bottom: 10px;
     border-radius: 20px;
-    background-color: lightgray;
     text-align: center;
+    box-shadow: 3px 3px 8px 3px rgba(165, 165, 165, 0.4);
 }
 
 .cadUsuario{
@@ -248,7 +248,7 @@ p{
     margin-right: 25px;
     margin-bottom: 10px;
     border-radius: 20px;
-    background-color: lightgray;
+    box-shadow: 3px 3px 8px 3px rgba(165, 165, 165, 0.4);
     text-align: center;
 }
 
@@ -264,7 +264,7 @@ p{
     margin-right: 25px;
     margin-bottom: 10px;
     border-radius: 20px;
-    background-color: lightgray;
+    box-shadow: 3px 3px 8px 3px rgba(165, 165, 165, 0.4);
     text-align: center;
 }
 
@@ -280,7 +280,7 @@ p{
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 20px;
-    background-color: lightgray;
+    box-shadow: 3px 3px 8px 3px rgba(165, 165, 165, 0.4);
     text-align: center;
 }
 
@@ -307,7 +307,7 @@ p{
     margin-right: 25px;
     margin-bottom: 10px;
     border-radius: 20px;
-    background-color: lightgray;
+    box-shadow: 3px 3px 8px 3px rgba(165, 165, 165, 0.4);
     text-align: center;
 }
 
@@ -371,7 +371,7 @@ p{
 }
 
 .div_top{
-    height: 80px;
+    height: 8vh;
     width: 100%;
     background-color: #001969 ;
     align-self: top;
@@ -379,7 +379,7 @@ p{
 }
 
 .div_bottom{
-    height: 80px;
+    height: 8vh;
     width: 100%;
     background-color: #001969;
     align-self: bottom;
@@ -396,5 +396,6 @@ p{
 .space{
     margin-top: 3px;
 }
+
 
 

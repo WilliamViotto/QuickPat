@@ -19,23 +19,22 @@ function Patrimonio () {
         <form action="">
         <div className='pai'>
           <div className='filha'>
-            <label> Nome Completo: </label> 
+            <label> Nome do Patrimônio: </label> 
             <Input type="text" placeholder='Digite o nome do item'></Input>
-            <label> ID: </label> 
-            <Input type="text" placeholder='Digite o ID do item'></Input> 
-            <label> Descrição: </label> 
-            <Input type="text" placeholder='Descreva do item'></Input>  
             <label> Modelo: </label>
             <Input type="text" placeholder='Digite o modelo' ></Input>  
             <label> Tipo: </label>
             <Input type="text" placeholder='Digite o tipo' ></Input>  
+            <label> Grupo: </label>
+            <Input type="text" placeholder='Digite o Grupo' ></Input> 
           </div>
 
           <div className='filha'>
             <label> Valor Real: </label>
             <Input type="text" placeholder='Digite o R$ da compra' ></Input>  
-            <label> Grupo: </label>
-            <Input type="text" placeholder='Digite o Grupo' ></Input> 
+
+            <label> Descrição: </label> 
+            <Input type="text" placeholder='Descreva do item'></Input>  
           </div>
         </div>
       

@@ -2,20 +2,30 @@ import '../estilo/estilo.css';
 import Cabecalho from '../componentes/cabecalho';
 import { useState } from 'react';
 import { Usuario } from '../componentes/types/usuario';
+import { Table } from 'reactstrap';
 
 function Monitorar() {
 
   const [usuarios, setUsuarios] = useState<Usuario[]>([]);
 
-  const carregarUsuarios = () => {
+  const [loading, setLoading] = useState(false);
 
-    fetch("https://jsonplaceholder.typicode.com/todos/")
-      .then((response) => {
-        return response.json();
-      })
-      .then((json) => {
-        setUsuarios(json);
-      })
+
+  const carregarUsuarios = async () => {
+
+    setLoading(true);
+    try {
+      let response = await fetch("https://jsonplaceholder.typicode.com/todos/")
+      let json = await response.json();
+
+
+      setLoading(false);
+      setUsuarios(json);
+    } catch (e) {
+      alert('Falha ao carregar os históricos de movimentação')
+      setLoading(false);
+      console.error(e);
+    }
   }
 
   return (
@@ -28,24 +38,116 @@ function Monitorar() {
         cabTexto5={"Monitorar"}
         cabTexto6={"Sair"}
       />
-      <h1> Monitoramento </h1>
-
-      <button onClick={carregarUsuarios}> Lista de Funcionários </button>
-      <br />
-      <div className='telamonitorar'>
+      <div>
 
       <div>
-        {usuarios.map((item, index) =>
-          <div key={index}>
-            <hr />
-            ID: {item.id} / User ID: {item.userId} / Título: {item.title}
-            <hr />
-          </div>
-        )}
-      </div>
+      <button onClick={carregarUsuarios}> Lista de Funcionários </button>
+      <br />
       </div>
 
 
+      
+      <div>
+        <Table
+          hover
+          responsive
+          size=""
+        >
+          <thead>
+            <tr className="table-light">
+              <th>
+                ID
+              </th>
+              <th>
+                NOME
+              </th>
+              <th>
+                ID PATRIMÔNIO
+              </th>
+              <th>
+                PATRIMÔNIO
+              </th>
+              <th>
+                OBSERVAÇÃO
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="table-light">
+              <th scope="row">
+                1
+              </th>
+              <td>
+                Mark
+              </td>
+              <td>
+                Otto
+              </td>
+              <td>
+                @mdo
+              </td>
+              <td>
+                @mdo
+              </td>
+            </tr>
+            <tr className="table-light">
+              <th scope="row">
+                2
+              </th>
+              <td>
+                Jacob
+              </td>
+              <td>
+                Thornton
+              </td>
+              <td>
+                @fat
+              </td>
+              <td>
+                @fat
+              </td>
+            </tr>
+            <tr className="table-light">
+              <th scope="row">
+                3
+              </th>
+              <td>
+                Larry
+              </td>
+              <td>
+                the Bird
+              </td>
+              <td>
+                @twitter
+              </td>
+              <td>
+                @twitter
+              </td>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+
+      
+
+      <div className='telamonitorar'>
+
+        {loading &&
+          <div>Carregando conteúdo ...</div>
+        }
+        <div>
+          {usuarios.map((item, index) =>
+            <div key={index}>
+              <hr />
+                 ID: {item.id} / User ID: {item.userId} / Título: {item.title} / Título: {item.completed}
+              <hr />
+            </div>
+          )}
+        </div>
+      </div>
+
+
+    </div>
     </div>
   )
 }
