@@ -2,7 +2,7 @@ import '../estilo/estilo.css';
 import Cabecalho from '../componentes/cabecalho';
 import { useState } from 'react';
 import { Usuario } from '../componentes/types/usuario';
-import { Table } from 'reactstrap';
+import { Input, Table } from 'reactstrap';
 
 function Monitorar() {
 
@@ -38,15 +38,23 @@ function Monitorar() {
         cabTexto5={"Monitorar"}
         cabTexto6={"Sair"}
       />
-      <div>
+      <div className='divcima'>
 
-      <div>
-      <button onClick={carregarUsuarios}> Lista de Funcionários </button>
-      <br />
+        <div className='divcima1'>
+          <button onClick={carregarUsuarios}> Lista de Funcionários </button>
+          <br />
+        </div>
+
+        <div className='divcima1'>
+          <label>ID do Patrimônio: </label>
+          <Input type='number'></Input>
+          <label>ID do Funcionário: </label>
+          <Input type='number'></Input>
+        </div>
+        <br />
       </div>
 
 
-      
       <div>
         <Table
           hover
@@ -128,7 +136,7 @@ function Monitorar() {
         </Table>
       </div>
 
-      
+
 
       <div className='telamonitorar'>
 
@@ -138,16 +146,26 @@ function Monitorar() {
         <div>
           {usuarios.map((item, index) =>
             <div key={index}>
-              <hr />
-                 ID: {item.id} / User ID: {item.userId} / Título: {item.title} / Título: {item.completed}
-              <hr />
+              <tbody>
+                <tr className="table-light">
+                  <th scope="row">
+                    {item.id} -
+                  </th>
+                  <td>
+                    {item.userId} -
+                  </td>
+                  <td>
+                    {item.title} -
+                  </td>
+                </tr>
+              </tbody>
             </div>
           )}
         </div>
       </div>
 
 
-    </div>
+
     </div>
   )
 }

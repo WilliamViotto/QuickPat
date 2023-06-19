@@ -30,8 +30,8 @@ function Patrimonio () {
           </div>
 
           <div className='filha'>
-            <label> Valor Real: </label>
-            <Input type="text" placeholder='Digite o R$ da compra' ></Input>  
+            <label> Valor Real R$: </label>
+            <Input type="text" placeholder='Digite o valor da compra' ></Input>  
 
             <label> Descrição: </label> 
             <Input type="text" placeholder='Descreva do item'></Input>  

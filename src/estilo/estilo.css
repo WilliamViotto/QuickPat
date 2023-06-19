@@ -337,17 +337,7 @@ p{
     align-items: center;
     background-color: lightgray;
     height: 100vh;
-    width: 100vw;
 
-}
-
-.div_centro{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 800px;
-    width: 800px;    
 }
 
 .div_logo{
@@ -399,3 +389,15 @@ p{
 
 
 
+
+
+.divcima{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divcima1{
+    align-items: center;
+    padding: 5vh;
+}
