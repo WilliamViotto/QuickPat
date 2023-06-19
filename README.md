@@ -31,7 +31,7 @@ Tela Login : Aqui sera a tela de entrar, onde tera um Login e Senha que serao va
 
 Tela Monitorar : Nessa tela teremos acesso total aos ID's dos funcionarios e patrimonios cadastrados no software.
 
-Tela Notefound : Essa tela sera exibida caso for preenchido algum link que nao esta especificado na rota.
+Tela Notfound : Essa tela sera exibida caso for preenchido algum link que nao esta especificado na rota.
 
 
 ``````
