@@ -130,6 +130,23 @@ p{
     flex-direction: row;
 }
 
+
+.divcima{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.divcima1{
+    align-items: center;
+    padding: 5vh;
+}
+
+.divcima2{
+    align-items: center;
+    padding: 12vh;
+}
+
   /* CSS CORPO Fim */
 
 
@@ -391,13 +408,3 @@ p{
 
 
 
-.divcima{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.divcima1{
-    align-items: center;
-    padding: 5vh;
-}

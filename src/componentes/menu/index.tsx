@@ -31,7 +31,7 @@ function Botoes (parametro: Props){
        <Link className="link-unstyled" to="/home/monitorar">{parametro.titmonitorar}</Link>  
       </div>
       <div className='cont5'>
-       <Link className="link-unstyled" to="/login">{parametro.titsair}</Link>   
+       <Link className="link-unstyled" to="/">{parametro.titsair}</Link>   
       </div>
 
     </div>

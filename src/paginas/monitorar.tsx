@@ -2,7 +2,7 @@ import '../estilo/estilo.css';
 import Cabecalho from '../componentes/cabecalho';
 import { useState } from 'react';
 import { Usuario } from '../componentes/types/usuario';
-import { Input, Table } from 'reactstrap';
+import { Button, Input, Table } from 'reactstrap';
 
 function Monitorar() {
 
@@ -18,9 +18,12 @@ function Monitorar() {
       let response = await fetch("https://jsonplaceholder.typicode.com/todos/")
       let json = await response.json();
 
+      const dataArray = Array.isArray(json) ? json : [json];
+
 
       setLoading(false);
-      setUsuarios(json);
+      setUsuarios(dataArray);
+
     } catch (e) {
       alert('Falha ao carregar os históricos de movimentação')
       setLoading(false);
@@ -40,17 +43,22 @@ function Monitorar() {
       />
       <div className='divcima'>
 
-        <div className='divcima1'>
-          <button onClick={carregarUsuarios}> Lista de Funcionários </button>
+        <div className='divcima2'>
+          <Button color="info" onClick={carregarUsuarios}> Lista de Funcionários </Button>
           <br />
         </div>
 
         <div className='divcima1'>
-          <label>ID do Patrimônio: </label>
-          <Input type='number'></Input>
-          <label>ID do Funcionário: </label>
-          <Input type='number'></Input>
+          <label>Nome do Patrimônio: </label>
+          <Input type='text'></Input>
+          <label>Nome do Funcionário: </label>
+          <Input type='text'></Input>
         </div>
+
+        <div className='divcima2'>
+          <Button color="success"> Movimentar </Button>
+        </div>
+
         <br />
       </div>
 
@@ -59,8 +67,7 @@ function Monitorar() {
         <Table
           hover
           responsive
-          size=""
-        >
+          size="">
           <thead>
             <tr className="table-light">
               <th>
@@ -80,59 +87,6 @@ function Monitorar() {
               </th>
             </tr>
           </thead>
-          <tbody>
-            <tr className="table-light">
-              <th scope="row">
-                1
-              </th>
-              <td>
-                Mark
-              </td>
-              <td>
-                Otto
-              </td>
-              <td>
-                @mdo
-              </td>
-              <td>
-                @mdo
-              </td>
-            </tr>
-            <tr className="table-light">
-              <th scope="row">
-                2
-              </th>
-              <td>
-                Jacob
-              </td>
-              <td>
-                Thornton
-              </td>
-              <td>
-                @fat
-              </td>
-              <td>
-                @fat
-              </td>
-            </tr>
-            <tr className="table-light">
-              <th scope="row">
-                3
-              </th>
-              <td>
-                Larry
-              </td>
-              <td>
-                the Bird
-              </td>
-              <td>
-                @twitter
-              </td>
-              <td>
-                @twitter
-              </td>
-            </tr>
-          </tbody>
         </Table>
       </div>
 
@@ -146,19 +100,30 @@ function Monitorar() {
         <div>
           {usuarios.map((item, index) =>
             <div key={index}>
-              <tbody>
-                <tr className="table-light">
-                  <th scope="row">
-                    {item.id} -
-                  </th>
-                  <td>
-                    {item.userId} -
-                  </td>
-                  <td>
-                    {item.title} -
-                  </td>
-                </tr>
-              </tbody>
+              <Table
+                hover
+                responsive
+                size="">
+                <tbody>
+                  <tr className="table-light">
+                    <th scope="row">
+                      {item.id}
+                    </th>
+                    <td>
+                      {item.title}
+                    </td>
+                    <td>
+                      {item.id}
+                    </td>
+                    <td>
+                      {item.title}
+                    </td>
+                    <td>
+                      {item.title}
+                    </td>
+                  </tr>
+                </tbody>
+              </Table>
             </div>
           )}
         </div>

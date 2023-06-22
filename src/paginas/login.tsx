@@ -28,7 +28,7 @@ function Inicial() {
                 <br />
 
                 <div className="entrar">
-                    <Link to='/'><Button color="success" size="lg" >Entrar</Button></Link>
+                    <Link to='/home'><Button color="success" size="lg" >Entrar</Button></Link>
                 </div>
             </div>
 
