@@ -3,6 +3,7 @@ import Cabecalho from '../componentes/cabecalho';
 import { useState } from 'react';
 import { Usuario } from '../componentes/types/usuario';
 import { Button, Input, Table } from 'reactstrap';
+import UsuarioItem from '../usuarioitem';
 
 function Monitorar() {
 
@@ -62,7 +63,6 @@ function Monitorar() {
         <br />
       </div>
 
-
       <div>
         <Table
           hover
@@ -91,47 +91,18 @@ function Monitorar() {
       </div>
 
 
-
       <div className='telamonitorar'>
 
-        {loading &&
-          <div>Carregando conteúdo ...</div>
+        {!loading &&
+          <div>
+            {usuarios.map((item, index) => (
+              <UsuarioItem data={item} />
+            ))}
+          </div>
         }
-        <div>
-          {usuarios.map((item, index) =>
-            <div key={index}>
-              <Table
-                hover
-                responsive
-                size="">
-                <tbody>
-                  <tr className="table-light">
-                    <th scope="row">
-                      {item.id}
-                    </th>
-                    <td>
-                      {item.title}
-                    </td>
-                    <td>
-                      {item.id}
-                    </td>
-                    <td>
-                      {item.title}
-                    </td>
-                    <td>
-                      {item.title}
-                    </td>
-                  </tr>
-                </tbody>
-              </Table>
-            </div>
-          )}
-        </div>
       </div>
-
-
-
     </div>
+
   )
 }
 

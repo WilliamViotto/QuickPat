@@ -17,7 +17,7 @@ function Botoes (parametro: Props){
     <div className='container_pai'>
 
       <div className='cont1'>
-       <Link className="link-unstyled" to="/">{parametro.titInicio}</Link>   
+       <Link className="link-unstyled" to="/home">{parametro.titInicio}</Link>   
       </div>  
       <div className="dropdown">
         <button className="dropdown-button">Cadastros</button>
