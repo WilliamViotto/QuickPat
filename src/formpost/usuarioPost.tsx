@@ -15,7 +15,7 @@ type Props =
     ) => void;
   }
 
-function CadUsuario() {
+function CadUsuario({ onAdd }: Props) {
 
   const [addNome, setaddNome] = useState('');
   const [addSobrenome, setaddSobrenome] = useState('');
@@ -61,11 +61,11 @@ function CadUsuario() {
 
 
   function handleClickButton() {
-    if (addNome && addSobrenome && addEmail && addConfEmail && addTelum && addTeldois && addLogin && addSenha) {
-      // onAdd(addNome, addSobrenome, addEmail, addConfEmail, addTelum, addTeldois, addLogin, addSenha);
-    } else {
-      alert("Preencha todos os campos");
-    }
+   if (addNome && addSobrenome && addEmail && addConfEmail && addTelum && addTeldois && addLogin && addSenha) {
+      onAdd(addNome, addSobrenome, addEmail, addConfEmail, addTelum, addTeldois, addLogin, addSenha);
+   } else {
+     alert("Preencha todos os campos");
+   }
   }
 
   return (
@@ -97,7 +97,7 @@ function CadUsuario() {
           </div>
 
           <div className='botaocad'>
-            <Button value={addSenha} onChange={handleClickButton} color="success"> Cadastrar </Button>
+            <Button value={addSenha} onClick={handleClickButton} color="success"> Cadastrar </Button>
           </div>
 
         </div>

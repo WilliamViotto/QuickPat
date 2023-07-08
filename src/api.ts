@@ -12,9 +12,9 @@ export const api = {
                         nome: nome,
                         sobrenome: sobrenome,
                         email: email,
-                        confemail: confemail,
-                        telum: telum,
-                        teldois: teldois,
+                        confirmaemail: confemail,
+                        telefoneum: telum,
+                        telefonedois: teldois,
                         login: login,
                         senha: senha,
                     }),
@@ -54,3 +54,4 @@ export const api = {
     },
 
 }
+

@@ -16,19 +16,19 @@ function UsuarioItem({ data }: Props) {
                 <tbody>
                   <tr className="table-light">
                     <th scope="row">
-                      {data.id}
+                      {data.nome}
                     </th>
                     <td>
-                      {data.title}
+                      {data.sobrenome}
                     </td>
                     <td>
-                      {data.id}
+                      {data.email}
                     </td>
                     <td>
-                      {data.title}
+                      {data.confemail}
                     </td>
                     <td>
-                      {data.title}
+                      {data.telum}
                     </td>
                   </tr>
                 </tbody>

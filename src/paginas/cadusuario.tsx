@@ -3,10 +3,33 @@ import Cabecalho from '../componentes/cabecalho';
 import { useState } from 'react';
 import { Input, Button } from 'reactstrap';
 import CadUsuario from '../formpost/usuarioPost';
+import { api } from '../api';
+import { Usuario } from '../componentes/types/usuario';
 
 
 
-function Usuario() {
+function CadastroUsuario() {
+  
+  const [usuarios, setUsuarios] = useState<Usuario[]>([]);
+
+  const handleAddClick = async (nome: string,
+    sobrenome: string,
+    email: string,
+    confemail: string,
+    telum: string,
+    teldois: string,
+    login: string,
+    senha: string) => {
+     
+    let json = await api.InserirUsuarios(nome, sobrenome, email, confemail, telum, teldois, login, senha );
+
+    if (json.id) {
+        alert('Post Adicionado com sucesso!');
+        setUsuarios((usuarios) => [...usuarios, json]);
+    } else {
+        alert(json.message)
+    }
+}
   
   
   return (
@@ -19,10 +42,10 @@ function Usuario() {
         cabTexto5={"Monitorar"}
         cabTexto6={"Sair"}
       />
-      <CadUsuario/>
+      <CadUsuario onAdd={handleAddClick}/>
       
     </div>
   )
 }
 
-export default Usuario;
+export default CadastroUsuario;
