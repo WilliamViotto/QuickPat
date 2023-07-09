@@ -1,7 +1,6 @@
 import '../estilo/estilo.css';
 import Cabecalho from '../componentes/cabecalho';
 import { useState } from 'react';
-import { Input, Button } from 'reactstrap';
 import CadUsuario from '../formpost/usuarioPost';
 import { api } from '../api';
 import { Usuario } from '../componentes/types/usuario';
@@ -24,7 +23,7 @@ function CadastroUsuario() {
     let json = await api.InserirUsuarios(nome, sobrenome, email, confemail, telum, teldois, login, senha );
 
     if (json.id) {
-        alert('Post Adicionado com sucesso!');
+        alert('Usuario inserido com sucesso!');
         setUsuarios((usuarios) => [...usuarios, json]);
     } else {
         alert(json.message)

@@ -1,9 +1,31 @@
 import '../estilo/estilo.css';
 import Cabecalho from '../componentes/cabecalho';
 import { useState } from 'react';
-import { Input, Button } from 'reactstrap';
+import CadPatrimonio from '../formpost/patrimonioPost';
+import { api } from '../api';
+import { Patrimonio } from '../componentes/types/patrimonios';
 
-function Patrimonio () {
+function CadastroPatrimonio () {
+
+  const [patrimonios, setPatrimonios] = useState<Patrimonio[]>([]);
+
+  const handleAddClick = async (nome: string,
+    modelo: string,
+    tipo: string,
+    grupo: string,
+    valor: string,
+    descricao: string,
+  ) => {
+
+    let json = await api.InserirPatrimonios(nome, modelo, tipo, grupo, valor, descricao);
+
+    if (json.id) {
+      alert('Patrimonios inserido com sucesso!');
+      setPatrimonios((patrimonios) => [...patrimonios, json]);
+    } else {
+      alert(json.message)
+    }
+  }
     
     return(
       <div>
@@ -15,36 +37,10 @@ function Patrimonio () {
           cabTexto5={"Monitorar"}
           cabTexto6={"Sair"}
         />
-        <h1> Cadastro de Patrimônio </h1>
-        <form action="">
-        <div className='pai'>
-          <div className='filha'>
-            <label> Nome do Patrimônio: </label> 
-            <Input type="text" placeholder='Digite o nome do item'></Input>
-            <label> Modelo: </label>
-            <Input type="text" placeholder='Digite o modelo' ></Input>  
-            <label> Tipo: </label>
-            <Input type="text" placeholder='Digite o tipo' ></Input>  
-            <label> Grupo: </label>
-            <Input type="text" placeholder='Digite o Grupo' ></Input> 
-          </div>
+        <CadPatrimonio onAdd={handleAddClick}/>
 
-          <div className='filha'>
-            <label> Valor Real R$: </label>
-            <Input type="text" placeholder='Digite o valor da compra' ></Input>  
-
-            <label> Descrição: </label> 
-            <Input type="text" placeholder='Descreva do item'></Input>  
-          </div>
-        </div>
-      
-
-        <div className='botaocad'>
-         <Button color="success"> Cadastrar </Button>
-        </div>
-        </form>
       </div>
       )
   }
 
-export default Patrimonio;
+export default CadastroPatrimonio;
